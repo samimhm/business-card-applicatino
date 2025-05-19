@@ -9,8 +9,39 @@
   margin: 0 auto;
   max-height: 100vh;
   overflow: auto;
+  opacity: 0;
+  transform: translateY(32px);
+  animation: card-fade-in 0.7s cubic-bezier(.4,1.4,.6,1) 0.1s forwards;
+  transition: box-shadow 0.2s, transform 0.2s;
+}
+@keyframes card-fade-in {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.card-contact:hover {
+  box-shadow: 0 16px 48px 0 rgba(80, 60, 120, 0.25);
+  transform: translateY(-4px) scale(1.012);
 }
 
+/* Pop-in pentru logo și avatar */
+.card-contact .logo-anim, .card-contact .avatar-anim {
+  opacity: 0;
+  transform: scale(0.8);
+  animation: pop-in 0.7s cubic-bezier(.4,1.4,.6,1) 0.3s forwards;
+}
+.card-contact .avatar-anim {
+  animation-delay: 0.5s;
+}
+@keyframes pop-in {
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* Hover pe rândurile de contact */
 .card-contact .contact-row {
   display: flex;
   align-items: center;
@@ -19,6 +50,15 @@
   border-radius: 0.75rem;
   padding: 0.5rem 1rem;
   margin-bottom: 0.5rem;
+  transition: background 0.2s, box-shadow 0.2s;
+}
+.card-contact .contact-row:hover {
+  background: rgba(167, 139, 250, 0.10);
+  box-shadow: 0 2px 8px 0 rgba(80, 60, 120, 0.10);
+}
+.card-contact .contact-row:hover .contact-icon {
+  color: #c4b5fd;
+  filter: drop-shadow(0 0 2px #a78bfa);
 }
 
 .card-contact .contact-row:last-child {
@@ -30,6 +70,7 @@
   height: 1.5rem;
   color: #a78bfa;
   flex-shrink: 0;
+  transition: color 0.2s, filter 0.2s;
 }
 
 .card-contact .contact-label {
@@ -62,10 +103,11 @@
   font-size: 1.125rem;
   box-shadow: 0 2px 8px 0 rgba(80, 60, 120, 0.10);
   margin-top: 1rem;
-  transition: transform 0.2s;
+  transition: transform 0.2s, box-shadow 0.2s;
   cursor: pointer;
 }
 .card-contact .contact-button:hover {
   transform: scale(1.04);
   background: linear-gradient(90deg, #a78bfa 0%, #7c3aed 100%);
+  box-shadow: 0 4px 16px 0 rgba(80, 60, 120, 0.18);
 } 
