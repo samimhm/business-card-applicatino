@@ -1,0 +1,71 @@
+/* Stiluri suplimentare pentru cardul de contact */
+.card-contact {
+  box-shadow: 0 8px 32px 0 rgba(80, 60, 120, 0.15);
+  border-radius: 1.5rem;
+  background: rgba(24, 23, 28, 0.98);
+  border: 1px solid #2d2b36;
+  padding: 2rem 1.5rem;
+  max-width: 400px;
+  margin: 0 auto;
+  max-height: 100vh;
+  overflow: auto;
+}
+
+.card-contact .contact-row {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  background: rgba(35, 34, 40, 0.6);
+  border-radius: 0.75rem;
+  padding: 0.5rem 1rem;
+  margin-bottom: 0.5rem;
+}
+
+.card-contact .contact-row:last-child {
+  margin-bottom: 0;
+}
+
+.card-contact .contact-icon {
+  width: 1.5rem;
+  height: 1.5rem;
+  color: #a78bfa;
+  flex-shrink: 0;
+}
+
+.card-contact .contact-label {
+  font-weight: 600;
+  min-width: 80px;
+  display: none;
+}
+@media (min-width: 640px) {
+  .card-contact .contact-label {
+    display: inline;
+  }
+}
+
+.card-contact .contact-value a {
+  color: #fff;
+  text-decoration: underline;
+  transition: color 0.2s;
+}
+.card-contact .contact-value a:hover {
+  color: #a78bfa;
+}
+
+.card-contact .contact-button {
+  width: 100%;
+  background: linear-gradient(90deg, #7c3aed 0%, #a78bfa 100%);
+  color: #fff;
+  padding: 0.75rem 0;
+  border-radius: 0.75rem;
+  font-weight: 700;
+  font-size: 1.125rem;
+  box-shadow: 0 2px 8px 0 rgba(80, 60, 120, 0.10);
+  margin-top: 1rem;
+  transition: transform 0.2s;
+  cursor: pointer;
+}
+.card-contact .contact-button:hover {
+  transform: scale(1.04);
+  background: linear-gradient(90deg, #a78bfa 0%, #7c3aed 100%);
+} 
