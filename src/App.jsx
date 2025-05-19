@@ -49,15 +49,15 @@ function handleSaveContact() {
 
 export default function App() {
   return (
-    <div style={{ minHeight: '100vh', background: '#232228', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+    <div style={{ minHeight: '100vh', width: '100vw', background: '#232228', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
       <div className="card-contact">
         <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', marginBottom: '1.5rem' }}>
           <a href="https://applicatino.ro" target="_blank" rel="noopener noreferrer" style={{ display: 'inline-block' }}>
             <img src={logo} alt="Applicatino Logo" className="logo-anim" style={{ width: '8rem', borderRadius: '1rem', marginBottom: '1.5rem', boxShadow: '0 4px 16px 0 rgba(80,60,120,0.10)', cursor: 'pointer' }} />
           </a>
           <img src={avatar} alt="Avatar" className="avatar-anim" style={{ width: '100px', height: '100px', borderRadius: '50%', objectFit: 'cover', border: '3px solid #a78bfa', marginBottom: '1rem', marginTop: '-1rem', boxShadow: '0 2px 8px 0 rgba(80,60,120,0.15)' }} />
-          <h1 style={{ fontSize: '1.6rem', fontWeight: 800, color: 'white', textAlign: 'center', margin: 0, lineHeight: 1.1 }}>
-            Salvează Contactul Meu
+          <h1 style={{ fontSize: '1.2rem', fontWeight: 800, color: 'white', textAlign: 'center', margin: 0, lineHeight: 1.1 }}>
+            Software Developer
           </h1>
           <p style={{ color: '#a78bfa', fontWeight: 600, textAlign: 'center', margin: '0.5rem 0 0 0' }}>Applicatino SRL</p>
           <button
@@ -65,7 +65,7 @@ export default function App() {
             className="contact-button"
             style={{ marginTop: '1.5rem', marginBottom: 0, boxShadow: '0 2px 8px 0 rgba(80, 60, 120, 0.10)', border: 'none' }}
           >
-            Salvează în Telefon
+            Salvează Contactul
           </button>
         </div>
         <div style={{ display: 'flex', flexDirection: 'column', gap: '0.5rem', marginBottom: '1.5rem' }}>
